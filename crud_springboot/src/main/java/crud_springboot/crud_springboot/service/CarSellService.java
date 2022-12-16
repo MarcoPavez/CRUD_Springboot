@@ -31,11 +31,11 @@ public class CarSellService {
         return carSellRepository.findAll();
     }
 
-    public List<CarSell> buscarMasVendidos(int cantidad){
+    public List<CarSell> buscarMasVendidos(Integer cantidad){
         return carSellRepository.findMasVendidos(cantidad);
     }
 
-    public List<CarSell> buscarMontoMasVendidos(int cantidad, int monto){
+    public List<CarSell> buscarMontoMasVendidos(Integer cantidad, int monto){
         return carSellRepository.findMontoMasVendidos(cantidad,monto);
     }
 

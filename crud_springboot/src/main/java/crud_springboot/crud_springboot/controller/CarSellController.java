@@ -34,7 +34,7 @@ public class CarSellController {
     }
 
     @GetMapping("/CarSell/{cantidad}")
-    public List<CarSell> buscarMasMasVendidos(int cantidad){
+    public List<CarSell> buscarMasMasVendidos(Integer cantidad){
         return carSellService.buscarMasVendidos(cantidad);
     }
 

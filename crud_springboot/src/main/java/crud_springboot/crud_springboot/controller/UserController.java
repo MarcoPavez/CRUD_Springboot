@@ -1,5 +1,7 @@
 package crud_springboot.crud_springboot.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,6 +46,11 @@ public class UserController {
         userService.delete(id);
     }
 
+    @RequestMapping("/allUser")
+    public List<User> getAllUsers(){
+        List<User> listaUser = userService.getAllUsers();
+        return listaUser;
+    }
     //PathVariable cuando se ingresa dato desde url (get y delete)
     //Request body se ocupa cuando se manda desde postman, con formato json
 }
