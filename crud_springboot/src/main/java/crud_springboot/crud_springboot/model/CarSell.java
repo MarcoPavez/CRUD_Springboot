@@ -12,7 +12,7 @@ public class CarSell {
     @Id
     @GeneratedValue
     private Integer id;
-    private int cantidad;
+    private Integer cantidad;
 
     //Se hace relacion entre auto y compra/venta
     //La relacion Muchos a muchos implica dos relaciones 1 a Muchos
@@ -32,7 +32,7 @@ public class CarSell {
     public CarSell() {
     }
 
-    public CarSell(Integer id, int cantidad, Car car, BuySell buySell) {
+    public CarSell(Integer id, Integer cantidad, Car car, BuySell buySell) {
         this.id = id;
         this.cantidad = cantidad;
         this.car = car;
@@ -51,7 +51,7 @@ public class CarSell {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
+    public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
 

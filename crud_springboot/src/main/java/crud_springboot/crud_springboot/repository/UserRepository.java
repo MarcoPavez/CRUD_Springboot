@@ -9,7 +9,8 @@
 
 package crud_springboot.crud_springboot.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import crud_springboot.crud_springboot.model.User;
 
@@ -17,6 +18,7 @@ import crud_springboot.crud_springboot.model.User;
 //CrudRepository nos permite buscar cosas en la BBDD sin necesidad de programarla, se usan funciones predefinidas
 //Para que funcione crud requiere que se le entreguen los objetos a trabajar
 
-public interface UserRepository extends CrudRepository <User, Integer>{
+@Repository
+public interface UserRepository extends JpaRepository <User, Integer>{
     
 }

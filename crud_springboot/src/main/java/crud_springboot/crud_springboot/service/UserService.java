@@ -2,6 +2,8 @@
 
 package crud_springboot.crud_springboot.service;
 
+import java.util.List;
+
 import crud_springboot.crud_springboot.model.User;
 
 
@@ -13,4 +15,6 @@ public interface UserService {
     User save (User user);
 
     void delete (Integer id);
+
+    List<User> getAllUsers();
 }

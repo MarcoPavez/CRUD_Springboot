@@ -27,7 +27,7 @@ public class User {
     
     //Relacion 1:1
 
-    //@JsonBackReference
+   /*  //@JsonBackReference
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private License license;
 
@@ -35,22 +35,24 @@ public class User {
 
     //@JsonBackReference
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER) //1:Muchos parte con EAGER
-    private List<BuySell> buySell; //un User puede tener muchas compra y ventas de autos
+    private List<BuySell> buySell; //un User puede tener muchas compra y ventas de autos */
 
 
 
     public User() {
-    }
+    };
 
 
+    /* , License license, List<BuySell> buySell */
 
-    public User(int id, String name, String lastName, String correo, License license, List<BuySell> buySell) {
+    
+        /* this.license = license;
+        this.buySell = buySell; */
+    public User(int id, String name, String lastName, String correo) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.correo = correo;
-        this.license = license;
-        this.buySell = buySell;
     }
 
 
@@ -103,7 +105,7 @@ public class User {
 
 
 
-    public License getLicense() {
+   /*  public License getLicense() {
         return license;
     }
 
@@ -124,7 +126,7 @@ public class User {
     public void setBuySell(List<BuySell> buySell) {
         this.buySell = buySell;
     }
-
+ */
    
 
 }
